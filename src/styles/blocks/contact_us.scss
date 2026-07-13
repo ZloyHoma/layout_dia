@@ -47,21 +47,33 @@
   &__icon {
     width: $social-icon-size;
     height: $social-icon-size;
-    color: aqua;
-
+    background-color: $main-white-color;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
     @include hover(1.09);
+
+    &:hover {
+      background-color: $main-blue-color;
+    }
   }
 
   &__facebook {
-    background-image: url(./../images/icons/facebook.svg);
+    mask-image: url(./../images/icons/facebook.svg);
+    -webkit-mask-image: url(./../images/icons/facebook.svg);
   }
 
   &__twitter {
-    background-image: url(./../images/icons/twitter.svg);
+    mask-image: url(./../images/icons/twitter.svg);
+    -webkit-mask-image: url(./../images/icons/twitter.svg);
   }
 
   &__instagram {
-    background-image: url(./../images/icons/instagram.svg);
+    mask-image: url(./../images/icons/instagram.svg);
+    -webkit-mask-image: url(./../images/icons/instagram.svg);
   }
 }
 
