@@ -39,8 +39,9 @@
     height: 800px;
 
     &__container {
-      @include tablet-horizontal-screen;
       justify-content: center;
+      
+      @include tablet-horizontal-screen;
     }
 
     &__top {
