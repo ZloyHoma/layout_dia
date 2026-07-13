@@ -103,6 +103,6 @@
 
 @media (min-width: $pc-min-width) {
   .slider {
-    width: calc(50vw - $high-gap * 1.5 - $high-grid-col-width);
+    width: calc(50% - $high-gap * 2 - $high-grid-col-width);
   }
 }
