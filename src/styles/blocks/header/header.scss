@@ -1,16 +1,17 @@
 .header {
-  display: flex;
+  position: relative;
   width: 100%;
-  height: 100%;
-  flex-direction: column;
-  justify-content: center;
-
+  height: 893px;
   color: $main-white-color;
-
   background-color: $header-background-color;
 
   border: none;
   border-radius: 0 0 30px 30px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
 
   &__top {
     padding: 18px $padding-mobile $padding-mobile;
@@ -35,7 +36,12 @@
 
 @media (min-width: $tablet-horizontal-min-width) {
   .header {
-    @include tablet-horizontal-screen;
+    height: 800px;
+
+    &__container {
+      @include tablet-horizontal-screen;
+      justify-content: center;
+    }
 
     &__top {
       grid-column: 1 / -1;
@@ -56,7 +62,10 @@
 
 @media (min-width: $pc-min-width) {
   .header {
-    @include pc-screen;
+
+    &__container {
+      @include pc-screen;
+    }
 
     &__bottom {
       grid-column: 8 / -1;
